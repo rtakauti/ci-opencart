@@ -13,7 +13,7 @@ services:
      - MYSQL_ROOT_PASSWORD=123
 
   opencartweb:
-#    image: rtakauti/ci-opencart1
+#    image: rtakauti/ci-opencart3.0.2.0
     build:
       context: .
       dockerfile: Dockerfile
@@ -24,7 +24,8 @@ services:
     depends_on:
     - opencartdb
     volumes:
-    - ./opencart:/var/www/html
+    - ./html:/var/www/html
+    - ./:/var/www
     ports:
     - "80"
     links:
