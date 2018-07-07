@@ -72,6 +72,7 @@ if [[ "$1" == apache2* ]] || [ "$1" == php-fpm ]; then
 				# END Opencart
 			EOF
 			chown "$user:$group" .htaccess
+			chmod 777 .htaccess
 		fi
 	fi
 
